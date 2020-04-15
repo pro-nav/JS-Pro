@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=auto, initial-scale=0.8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tone.js Synth Expriment</title>
+    <link rel="stylesheet" href="files/style.css">
+</head>
+
+<body>
+    <div class="switchbox" title="Toggle Notes" > 
+            <input id="checkbox" type="checkbox" onclick="toggle()">
+    </div>
+    <ul class="board">
+
+        <li id="F2" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="F#2" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="G2" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="G#2" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="A2" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="A#2" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="B2" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="C3" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="C#3" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="D3" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="D#3" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="E3" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="F3" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="F#3" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="G3" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="G#3" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="A3" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="A#3" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="B3" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="C4" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">A</div></li>
+        <li id="C#4" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="D4" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">S</div></li>
+        <li id="D#4" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="E4" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">D</div></li>
+
+
+        <li id="F4" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">F</div></li>
+        <li id="F#4" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="G4" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">G</div></li>
+        <li id="G#4" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="A4" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">H</div></li>
+        <li id="A#4" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="B4" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">J</div></li>
+
+
+        <li id="C5" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">K</div></li>
+        <li id="C#5" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="D5" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">L</div></li>
+        <li id="D#5" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="E5" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"><div class="note">;</div></li>
+
+
+        <li id="F5" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="F#5" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="G5" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="G#5" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="A5" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="A#5" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="B5" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="C6" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="C#6" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="D6" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="D#6" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="E6" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="F6" class="white" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="F#6" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="G6" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="G#6" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="A6" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+        <li id="A#6" class="black" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+
+        <li id="B6" class="white sq" onmouseout="keyRele(this.id)" onmouseup="keyRele(this.id)" onmousedown="getkey(this.id)"></li>
+
+    </ul>
+
+    <div class="author">@pro-nav</div>
+
+    <script src="files/Tone.js"></script>
+    <script src="files/script.js"></script>
+</body>
+
+</html>
